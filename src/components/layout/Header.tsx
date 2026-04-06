@@ -37,7 +37,7 @@ export function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || mobileOpen
           ? "bg-white/95 backdrop-blur-md shadow-header"
           : "bg-transparent"
       )}
@@ -49,7 +49,7 @@ export function Header() {
             href="/"
             className={cn(
               "text-xl font-bold tracking-tight transition-colors",
-              scrolled ? "text-foreground" : "text-white"
+              scrolled || mobileOpen ? "text-foreground" : "text-white"
             )}
           >
             {siteConfig.name}
@@ -136,7 +136,7 @@ export function Header() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className={cn(
               "lg:hidden p-2 transition-colors",
-              scrolled ? "text-foreground" : "text-white"
+              scrolled || mobileOpen ? "text-foreground" : "text-white"
             )}
             aria-label="Toggle menu"
           >
@@ -152,10 +152,10 @@ export function Header() {
       {/* Mobile Menu */}
       <div
         className={cn(
-          "fixed inset-0 top-20 z-40 bg-white transition-all duration-300 lg:hidden",
+          "fixed top-20 left-0 right-0 bottom-0 z-50 overflow-y-auto border-t border-border bg-white transition-opacity duration-300 lg:hidden",
           mobileOpen
-            ? "visible translate-x-0 opacity-100"
-            : "invisible translate-x-full opacity-0"
+            ? "visible opacity-100"
+            : "invisible opacity-0 pointer-events-none"
         )}
       >
         <div className="flex flex-col gap-1 p-6">

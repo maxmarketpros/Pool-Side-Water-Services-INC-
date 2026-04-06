@@ -1,7 +1,10 @@
+import { ArrowRight, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { services } from "@/config/services";
+import { businessConfig } from "@/config/business";
 import { homepageContent } from "@/config/homepage";
 
 export function ServiceGrid() {
@@ -21,6 +24,24 @@ export function ServiceGrid() {
           {services.map((service) => (
             <ServiceCard key={service.slug} service={service} />
           ))}
+        </div>
+
+        <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Button
+            href="/contact"
+            size="lg"
+            icon={<ArrowRight className="h-5 w-5" />}
+          >
+            Get a Quote
+          </Button>
+          <Button
+            href={`tel:${businessConfig.phoneRaw}`}
+            variant="outline"
+            size="lg"
+            icon={<Phone className="h-5 w-5" />}
+          >
+            {businessConfig.phone}
+          </Button>
         </div>
       </Container>
     </section>

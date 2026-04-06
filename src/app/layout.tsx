@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [{ url: siteConfig.ogImage }],
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 import { Hero } from "@/components/sections/Hero";
 import { InfoBar } from "@/components/layout/InfoBar";
 import { SplitSection } from "@/components/sections/SplitSection";
@@ -15,6 +17,22 @@ import { ChecklistItem } from "@/components/ui/ChecklistItem";
 import { homepageContent } from "@/config/homepage";
 import { homepageFaqKeys } from "@/config/faqs";
 import { ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: `${siteConfig.name} | ${siteConfig.tagline}`,
+  description: siteConfig.description,
+  openGraph: {
+    title: `${siteConfig.name} | ${siteConfig.tagline}`,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [{ url: siteConfig.ogImage }],
+    type: "website",
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
 
 export default function HomePage() {
   const content = homepageContent;

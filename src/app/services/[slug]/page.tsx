@@ -3,21 +3,33 @@ import { notFound } from "next/navigation";
 import { PageHero } from "@/components/sections/PageHero";
 import { SplitSection } from "@/components/sections/SplitSection";
 import { BenefitGrid } from "@/components/sections/BenefitGrid";
-import { ChecklistGrid } from "@/components/sections/ChecklistGrid";
+import { ServiceScopeSection } from "@/components/sections/ServiceScopeSection";
+import { TopicCardGrid } from "@/components/sections/TopicCardGrid";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { QuoteSection } from "@/components/sections/QuoteSection";
 import { FeatureList } from "@/components/sections/FeatureList";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 import { services } from "@/config/services";
+import { businessConfig } from "@/config/business";
 import { generatePageMetadata } from "@/lib/metadata";
 import {
   generateServiceSchema,
   generateBreadcrumbSchema,
 } from "@/lib/structured-data";
+import { ArrowRight, Phone } from "lucide-react";
 
 interface ServicePageProps {
   params: Promise<{ slug: string }>;
 }
+
+const { city, state } = businessConfig.address;
+const cityState = `${city}, ${state}`;
+const ctaProps = {
+  primary: { label: "Get a Quote", href: "/contact" },
+  secondary: { label: `Call ${businessConfig.phone}`, href: `tel:${businessConfig.phoneRaw}` },
+};
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -31,7 +43,7 @@ export async function generateMetadata({
   if (!service) return {};
 
   return generatePageMetadata({
-    title: service.title,
+    title: `${service.title} in ${cityState}`,
     description: service.excerpt,
     path: `/services/${service.slug}`,
   });
@@ -75,9 +87,9 @@ export default async function ServicePage({ params }: ServicePageProps) {
         }}
       />
 
-      {/* Page Hero — shorter than homepage */}
+      {/* Page Hero — H1 includes city, state */}
       <PageHero
-        heading={service.title}
+        heading={`${service.title} in ${cityState}`}
         subtitle={service.excerpt}
         imageKey={service.heroImage}
         breadcrumbs={[
@@ -85,9 +97,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
           { label: "Services", href: "/services" },
           { label: service.title },
         ]}
+        primaryCta={ctaProps.primary}
+        secondaryCta={ctaProps.secondary}
       />
 
-      {/* Overview — SplitSection with service description */}
+      {/* Overview */}
       <SplitSection
         imageKey={service.cardImage}
         imagePosition="right"
@@ -105,32 +119,67 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {p}
           </p>
         ))}
+        <div className="mt-6 flex flex-wrap gap-4">
+          <Button
+            href="/contact"
+            icon={<ArrowRight className="h-5 w-5" />}
+          >
+            Get a Quote
+          </Button>
+          <Button
+            href={`tel:${businessConfig.phoneRaw}`}
+            variant="outline"
+            icon={<Phone className="h-5 w-5" />}
+          >
+            {businessConfig.phone}
+          </Button>
+        </div>
       </SplitSection>
 
-      {/* Benefits — unique to service pages */}
+      {/* Benefits */}
       <BenefitGrid
         benefits={service.benefits}
         eyebrow="What Sets Us Apart"
         heading="Key Benefits"
         subtitle={`Here's what makes our ${service.title.toLowerCase()} stand out from the rest.`}
         bgColor="surface"
+        primaryCta={ctaProps.primary}
+        secondaryCta={ctaProps.secondary}
       />
 
-      {/* Feature showcase — alternating rows, unique to service pages */}
+      {/* Feature showcase — alternating rows */}
       <FeatureList features={featureListItems} />
 
-      {/* What's Included — checklist */}
-      <ChecklistGrid
-        items={service.features}
-        eyebrow="What's Included"
-        heading="Complete Service Scope"
-        subtitle="Every engagement includes the following as standard."
-        columns={2}
+      {/* SEO Topic Section A — above Complete Service Scope */}
+      <TopicCardGrid
+        eyebrow={service.topicSectionA.eyebrow}
+        heading={service.topicSectionA.heading}
+        subtitle={service.topicSectionA.subtitle}
+        items={service.topicSectionA.items}
         bgColor="surface"
-        standalone
+        primaryCta={ctaProps.primary}
+        secondaryCta={ctaProps.secondary}
       />
 
-      {/* FAQ — service-specific */}
+      {/* What's Included */}
+      <ServiceScopeSection
+        items={service.features}
+        primaryCta={ctaProps.primary}
+        secondaryCta={ctaProps.secondary}
+      />
+
+      {/* SEO Topic Section B — below Complete Service Scope */}
+      <TopicCardGrid
+        eyebrow={service.topicSectionB.eyebrow}
+        heading={service.topicSectionB.heading}
+        subtitle={service.topicSectionB.subtitle}
+        items={service.topicSectionB.items}
+        bgColor="surface"
+        primaryCta={ctaProps.primary}
+        secondaryCta={ctaProps.secondary}
+      />
+
+      {/* FAQ — service-specific (6 questions now) */}
       <FAQSection
         eyebrow="Common Questions"
         heading={`${service.title} FAQ`}
@@ -141,12 +190,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <CTASection
         heading={service.ctaHeading}
         text={service.ctaText}
-        primaryCta={{ label: "Schedule Consultation", href: "/contact" }}
-        secondaryCta={{
-          label: "Call Now",
-          href: `tel:+15551234567`,
-        }}
+        primaryCta={ctaProps.primary}
+        secondaryCta={ctaProps.secondary}
       />
+
+      {/* Quote Form */}
+      <QuoteSection />
     </>
   );
 }

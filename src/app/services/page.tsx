@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { CTASection } from "@/components/sections/CTASection";
+import { QuoteSection } from "@/components/sections/QuoteSection";
 import { Container } from "@/components/ui/Container";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { services } from "@/config/services";
@@ -39,8 +40,11 @@ export default function ServicesPage() {
       <CTASection
         heading="Not Sure Which Service You Need?"
         text="Contact us for a free consultation. We'll assess your needs and recommend the best approach."
-        primaryCta={{ label: "Contact Us", href: "/contact" }}
+        primaryCta={{ label: "Get a Quote", href: "/contact" }}
       />
+
+      {/* Quote Form */}
+      <QuoteSection />
     </>
   );
 }

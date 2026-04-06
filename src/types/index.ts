@@ -6,6 +6,12 @@ export interface ImageSlotConfig {
   focalPoint?: { x: number; y: number };
 }
 
+export interface ServiceSubTopic {
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface ServiceConfig {
   slug: string;
   title: string;
@@ -20,6 +26,20 @@ export interface ServiceConfig {
   faqKeys: string[];
   ctaHeading: string;
   ctaText: string;
+  // SEO-focused sub-topic sections for service pages
+  // These provide keyword-rich content with icon cards
+  topicSectionA: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    items: ServiceSubTopic[];
+  };
+  topicSectionB: {
+    eyebrow: string;
+    heading: string;
+    subtitle: string;
+    items: ServiceSubTopic[];
+  };
 }
 
 export interface BenefitItem {

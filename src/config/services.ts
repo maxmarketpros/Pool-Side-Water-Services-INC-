@@ -50,10 +50,93 @@ export const services: ServiceConfig[] = [
       "Dedicated project manager",
     ],
     detailImages: ["service-1-detail-1", "service-1-detail-2"],
-    faqKeys: ["faq-general-1", "faq-general-2", "faq-general-3"],
+    faqKeys: [
+      "faq-general-1",
+      "faq-general-2",
+      "faq-general-3",
+      "faq-s1-1",
+      "faq-s1-2",
+      "faq-s1-3",
+    ],
     ctaHeading: "Ready to Get Started?",
     ctaText:
       "Schedule a free consultation and let us show you what quality service looks like.",
+    topicSectionA: {
+      eyebrow: "Our Expertise",
+      heading: "Professional Service One Solutions in Springfield, IL",
+      subtitle:
+        "Comprehensive expertise across every aspect of Service One, backed by years of local experience.",
+      items: [
+        {
+          title: "Residential Projects",
+          description:
+            "Tailored solutions for homeowners seeking quality craftsmanship and lasting results in their residential properties.",
+          icon: "Home",
+        },
+        {
+          title: "Commercial Applications",
+          description:
+            "Scalable service delivery for commercial properties, offices, and retail spaces with minimal disruption to operations.",
+          icon: "Building",
+        },
+        {
+          title: "Emergency Response",
+          description:
+            "Rapid response capability for urgent needs. Our team is equipped to handle time-sensitive situations efficiently.",
+          icon: "AlertCircle",
+        },
+        {
+          title: "Preventive Maintenance",
+          description:
+            "Scheduled maintenance programs designed to prevent costly issues and extend the life of your investment.",
+          icon: "CalendarCheck",
+        },
+        {
+          title: "Code Compliance",
+          description:
+            "Full compliance with local building codes and regulations. We handle permits and inspections seamlessly.",
+          icon: "ClipboardCheck",
+        },
+        {
+          title: "Energy Efficiency",
+          description:
+            "Modern solutions that improve performance while reducing long-term operating costs and environmental impact.",
+          icon: "Leaf",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Why Springfield Trusts Us",
+      heading: "Service One Built for Springfield's Needs",
+      subtitle:
+        "Local knowledge and regional expertise that generic providers simply cannot match.",
+      items: [
+        {
+          title: "Local Climate Expertise",
+          description:
+            "We understand the unique challenges of the local climate and design solutions that perform year-round.",
+          icon: "Thermometer",
+        },
+        {
+          title: "Regional Code Knowledge",
+          description:
+            "Deep familiarity with Springfield area building codes, permitting processes, and inspection requirements.",
+          icon: "FileCheck",
+        },
+        {
+          title: "Trusted Local Suppliers",
+          description:
+            "Established relationships with regional suppliers ensure premium materials at competitive pricing.",
+          icon: "Truck",
+        },
+        {
+          title: "Community Reputation",
+          description:
+            "Built on word-of-mouth referrals from satisfied Springfield homeowners and business owners.",
+          icon: "Star",
+        },
+      ],
+    },
   },
   {
     slug: "service-two",
@@ -104,10 +187,93 @@ export const services: ServiceConfig[] = [
       "Extended warranty coverage",
     ],
     detailImages: ["service-2-detail-1", "service-2-detail-2"],
-    faqKeys: ["faq-general-1", "faq-general-4", "faq-general-5"],
+    faqKeys: [
+      "faq-general-1",
+      "faq-general-4",
+      "faq-general-5",
+      "faq-s2-1",
+      "faq-s2-2",
+      "faq-s2-3",
+    ],
     ctaHeading: "Let's Discuss Your Project",
     ctaText:
       "Every great project starts with a conversation. Reach out today for a free estimate.",
+    topicSectionA: {
+      eyebrow: "Specialized Solutions",
+      heading: "Advanced Service Two Capabilities in Springfield, IL",
+      subtitle:
+        "Specialized techniques and premium methods that deliver results beyond the ordinary.",
+      items: [
+        {
+          title: "Custom Design",
+          description:
+            "Bespoke design solutions created specifically for your property, preferences, and functional requirements.",
+          icon: "Palette",
+        },
+        {
+          title: "Material Selection",
+          description:
+            "Expert guidance on premium material options that balance aesthetics, durability, and budget.",
+          icon: "Layers",
+        },
+        {
+          title: "Technical Precision",
+          description:
+            "Advanced measurement and installation techniques that ensure flawless execution on every detail.",
+          icon: "Ruler",
+        },
+        {
+          title: "Quality Assurance",
+          description:
+            "Multi-point inspection protocols at every phase to guarantee work meets our exacting standards.",
+          icon: "BadgeCheck",
+        },
+        {
+          title: "Timeline Management",
+          description:
+            "Detailed scheduling with milestone tracking to keep your project on pace from start to finish.",
+          icon: "Timer",
+        },
+        {
+          title: "Post-Project Support",
+          description:
+            "Extended warranty coverage and responsive after-service support for complete peace of mind.",
+          icon: "LifeBuoy",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Local Advantage",
+      heading: "Trusted Service Two Provider in Springfield, IL",
+      subtitle:
+        "Regional expertise and deep community roots that set us apart from national competitors.",
+      items: [
+        {
+          title: "15+ Years Local Experience",
+          description:
+            "Over a decade and a half serving Springfield and surrounding communities with consistent excellence.",
+          icon: "Award",
+        },
+        {
+          title: "Springfield-Area Specialists",
+          description:
+            "Intimate knowledge of local property styles, construction methods, and environmental considerations.",
+          icon: "MapPin",
+        },
+        {
+          title: "Vetted Subcontractors",
+          description:
+            "A curated network of local trade partners we trust to uphold our quality standards.",
+          icon: "UserCheck",
+        },
+        {
+          title: "Responsive Local Team",
+          description:
+            "A team based right here in the area — available for site visits, adjustments, and ongoing support.",
+          icon: "PhoneCall",
+        },
+      ],
+    },
   },
   {
     slug: "service-three",
@@ -158,9 +324,92 @@ export const services: ServiceConfig[] = [
       "Final closeout and documentation",
     ],
     detailImages: ["service-3-detail-1", "service-3-detail-2"],
-    faqKeys: ["faq-general-2", "faq-general-5", "faq-general-6"],
+    faqKeys: [
+      "faq-general-2",
+      "faq-general-5",
+      "faq-general-6",
+      "faq-s3-1",
+      "faq-s3-2",
+      "faq-s3-3",
+    ],
     ctaHeading: "Start Your Project Right",
     ctaText:
       "Professional management from day one. Contact us to learn how we can help.",
+    topicSectionA: {
+      eyebrow: "Full-Scope Management",
+      heading: "Comprehensive Service Three in Springfield, IL",
+      subtitle:
+        "End-to-end project oversight that keeps everything on track, on budget, and on standard.",
+      items: [
+        {
+          title: "Scope Development",
+          description:
+            "Thorough project scoping that defines every deliverable, timeline, and cost before work begins.",
+          icon: "Target",
+        },
+        {
+          title: "Vendor Coordination",
+          description:
+            "Management of all subcontractors and suppliers with rigorous vetting and performance tracking.",
+          icon: "Network",
+        },
+        {
+          title: "Schedule Optimization",
+          description:
+            "Strategic sequencing of work phases to minimize delays and maximize efficiency across all teams.",
+          icon: "CalendarClock",
+        },
+        {
+          title: "Budget Transparency",
+          description:
+            "Line-item budget tracking with regular financial reporting so you always know where every dollar goes.",
+          icon: "PieChart",
+        },
+        {
+          title: "Safety Compliance",
+          description:
+            "Rigorous safety protocols and OSHA compliance enforced across every job site we manage.",
+          icon: "HardHat",
+        },
+        {
+          title: "Quality Control",
+          description:
+            "Systematic inspection checkpoints and quality holdpoints that prevent issues before they escalate.",
+          icon: "SearchCheck",
+        },
+      ],
+    },
+    topicSectionB: {
+      eyebrow: "Springfield Project Experts",
+      heading: "Service Three Trusted Across Springfield, IL",
+      subtitle:
+        "The local project management partner that property owners and developers rely on.",
+      items: [
+        {
+          title: "Multi-Phase Experience",
+          description:
+            "Proven ability to manage complex, multi-phase projects across residential and commercial properties.",
+          icon: "Layers",
+        },
+        {
+          title: "Permit Navigation",
+          description:
+            "Streamlined permitting through established relationships with local building departments.",
+          icon: "Stamp",
+        },
+        {
+          title: "Owner Representation",
+          description:
+            "We act as your on-site representative, protecting your interests at every decision point.",
+          icon: "Shield",
+        },
+        {
+          title: "Closeout Excellence",
+          description:
+            "Comprehensive project closeout including documentation, warranties, and final accounting.",
+          icon: "CheckSquare",
+        },
+      ],
+    },
   },
 ];

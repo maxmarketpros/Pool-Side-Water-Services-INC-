@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { Button } from "@/components/ui/Button";
 import { ImageSlot } from "@/components/ui/ImageSlot";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +15,8 @@ interface PageHeroProps {
   subtitle?: string;
   imageKey: string;
   breadcrumbs?: BreadcrumbItem[];
+  primaryCta?: { label: string; href: string };
+  secondaryCta?: { label: string; href: string };
   className?: string;
 }
 
@@ -22,6 +25,8 @@ export function PageHero({
   subtitle,
   imageKey,
   breadcrumbs,
+  primaryCta,
+  secondaryCta,
   className,
 }: PageHeroProps) {
   return (
@@ -70,6 +75,31 @@ export function PageHero({
 
         {subtitle && (
           <p className="mt-4 max-w-xl text-lg text-white/80">{subtitle}</p>
+        )}
+
+        {(primaryCta || secondaryCta) && (
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            {primaryCta && (
+              <Button
+                href={primaryCta.href}
+                size="lg"
+                icon={<ArrowRight className="h-5 w-5" />}
+              >
+                {primaryCta.label}
+              </Button>
+            )}
+            {secondaryCta && (
+              <Button
+                href={secondaryCta.href}
+                variant="outline"
+                size="lg"
+                className="border-white text-white hover:bg-white hover:text-foreground"
+                icon={<Phone className="h-5 w-5" />}
+              >
+                {secondaryCta.label}
+              </Button>
+            )}
+          </div>
         )}
       </Container>
     </section>

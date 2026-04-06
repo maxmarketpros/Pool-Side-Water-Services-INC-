@@ -1,8 +1,8 @@
 import type { NavItem, FooterGroup } from "@/types";
 
 export const mainNav: NavItem[] = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Process", href: "/about#process" },
   {
     label: "Services",
     href: "/services",

@@ -127,7 +127,7 @@ export function Header() {
               {businessConfig.phone}
             </a>
             <Button href="/contact" size="sm">
-              Get Started
+              Get a Quote
             </Button>
           </div>
 
@@ -217,7 +217,7 @@ export function Header() {
           </a>
 
           <Button href="/contact" className="mt-2 w-full" onClick={() => setMobileOpen(false)}>
-            Get Started
+            Get a Quote
           </Button>
         </div>
       </div>

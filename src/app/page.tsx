@@ -6,6 +6,8 @@ import { ProcessGrid } from "@/components/sections/ProcessGrid";
 import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { ServiceAreasSection } from "@/components/sections/ServiceAreasSection";
+import { QuoteSection } from "@/components/sections/QuoteSection";
 import { ChecklistGrid } from "@/components/sections/ChecklistGrid";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -54,7 +56,7 @@ export default function HomePage() {
             href="/contact"
             icon={<ArrowRight className="h-5 w-5" />}
           >
-            Start Your Project
+            Get a Quote
           </Button>
           <Button href="/about" variant="outline">
             Learn More
@@ -95,6 +97,8 @@ export default function HomePage() {
         heading={content.process.heading}
         subtitle={content.process.subtitle}
         bgColor="white"
+        primaryCta={{ label: "Get a Quote", href: "/contact" }}
+        secondaryCta={{ label: "Call (555) 123-4567", href: "tel:+15551234567" }}
       />
 
       {/* Testimonials */}
@@ -104,6 +108,9 @@ export default function HomePage() {
         subtitle={content.testimonials.subtitle}
         bgColor="surface"
       />
+
+      {/* Service Areas */}
+      <ServiceAreasSection />
 
       {/* FAQ */}
       <FAQSection
@@ -121,6 +128,9 @@ export default function HomePage() {
         primaryCta={content.cta.primaryCta}
         secondaryCta={content.cta.secondaryCta}
       />
+
+      {/* Quote Form */}
+      <QuoteSection />
     </>
   );
 }

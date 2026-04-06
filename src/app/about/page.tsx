@@ -5,6 +5,7 @@ import { StatsRow } from "@/components/sections/StatsRow";
 import { ProcessGrid } from "@/components/sections/ProcessGrid";
 import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { QuoteSection } from "@/components/sections/QuoteSection";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Container } from "@/components/ui/Container";
 import { aboutContent } from "@/config/about";
@@ -45,6 +46,8 @@ export default function AboutPage() {
         subtitle={aboutContent.hero.subtitle}
         imageKey="about-hero"
         breadcrumbs={breadcrumbs}
+        primaryCta={{ label: "Get a Quote", href: "/contact" }}
+        secondaryCta={{ label: "Call (555) 123-4567", href: "tel:+15551234567" }}
       />
 
       {/* Story Section */}
@@ -116,6 +119,7 @@ export default function AboutPage() {
         eyebrow="Our Process"
         heading="How Every Project Works"
         subtitle="A proven four-step process refined over 15 years of delivering excellence."
+        primaryCta={{ label: "Get a Quote", href: "/contact" }}
       />
 
       {/* Testimonials */}
@@ -125,9 +129,12 @@ export default function AboutPage() {
       <CTASection
         heading="Ready to Work With Us?"
         text="Start with a free consultation. No pressure, no obligation — just an honest conversation about your project."
-        primaryCta={{ label: "Get Started", href: "/contact" }}
+        primaryCta={{ label: "Get a Quote", href: "/contact" }}
         secondaryCta={{ label: "View Our Services", href: "/services" }}
       />
+
+      {/* Quote Form */}
+      <QuoteSection />
     </>
   );
 }

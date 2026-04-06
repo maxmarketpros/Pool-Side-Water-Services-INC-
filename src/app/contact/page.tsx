@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { QuoteSection } from "@/components/sections/QuoteSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { contactFaqKeys } from "@/config/faqs";
@@ -37,9 +37,11 @@ export default function ContactPage() {
           { label: "Home", href: "/" },
           { label: "Contact" },
         ]}
+        primaryCta={{ label: "Get a Quote", href: "#quote" }}
+        secondaryCta={{ label: "Call (555) 123-4567", href: "tel:+15551234567" }}
       />
 
-      <ContactSection />
+      <QuoteSection id="quote" />
 
       <FAQSection
         eyebrow="Questions"

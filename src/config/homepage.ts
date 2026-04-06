@@ -3,7 +3,7 @@ export const homepageContent = {
     heading: "Trusted Professional Services in Springfield, IL",
     subtitle:
       "Premium quality work, transparent pricing, and full project accountability across Springfield and the surrounding region.",
-    primaryCta: { label: "Schedule Consultation", href: "/contact" },
+    primaryCta: { label: "Get a Quote", href: "/contact" },
     secondaryCta: { label: "Call (555) 123-4567", href: "tel:+15551234567" },
   },
   aboutPreview: {
@@ -79,7 +79,7 @@ export const homepageContent = {
   cta: {
     heading: "Ready to Start Your Project?",
     text: "Schedule a free consultation today and discover why hundreds of clients trust us with their most important projects.",
-    primaryCta: { label: "Get Started", href: "/contact" },
+    primaryCta: { label: "Get a Quote", href: "/contact" },
     secondaryCta: { label: "Call (555) 123-4567", href: "tel:+15551234567" },
   },
 } as const;

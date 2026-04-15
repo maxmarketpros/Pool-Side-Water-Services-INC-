@@ -11,7 +11,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-white">
       <Container>
-        <div className="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-5">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="text-xl font-bold">

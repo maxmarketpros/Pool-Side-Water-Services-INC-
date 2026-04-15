@@ -20,3 +20,10 @@ next-env.d.ts
 # OS
 .DS_Store
 Thumbs.db
+
+# Asset backups
+ASSETS/ASSETS_backup/
+
+# Downloaded raw photos at repo root (from earlier scraping)
+/client-photos/
+/client-photos-best-pools/

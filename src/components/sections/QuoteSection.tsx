@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { FormEmbed } from "@/components/ui/FormEmbed";
+import { NetlifyForm } from "@/components/ui/NetlifyForm";
 import { businessConfig } from "@/config/business";
 
 interface QuoteSectionProps {
@@ -14,15 +14,15 @@ export function QuoteSection({ id }: QuoteSectionProps) {
       <Container>
         <SectionHeading
           eyebrow="Get a Quote"
-          heading="Request Your Free Estimate"
-          subtitle="Fill out the form below and we'll get back to you within one business day."
+          heading="Request Your Free Quote"
+          subtitle="Fill out the form below and we'll get back to you promptly. Emergency? Call us 24/7."
           align="center"
         />
 
         <div className="grid gap-10 lg:grid-cols-5">
           {/* Form */}
           <div className="lg:col-span-3">
-            <FormEmbed />
+            <NetlifyForm />
           </div>
 
           {/* Contact Details Sidebar */}

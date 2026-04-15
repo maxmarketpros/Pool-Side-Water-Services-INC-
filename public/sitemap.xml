@@ -1,43 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  SITEMAP — Update all URLs below when deploying to a real domain.
-  Replace "https://example.com" with the client's actual URL.
-  Add/remove service pages as needed to match services.ts.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://poolsidewaterservices.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://poolsidewaterservices.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/services/</loc>
+    <loc>https://poolsidewaterservices.com/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/services/service-one/</loc>
+    <loc>https://poolsidewaterservices.com/service-areas/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/services/service-two/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://example.com/services/service-three/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://example.com/contact/</loc>
+    <loc>https://poolsidewaterservices.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <!-- Core Service Pages -->
+  <url>
+    <loc>https://poolsidewaterservices.com/services/pool-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/well-water-refill/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/emergency-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/hot-tub-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/potable-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/bulk-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Expansion Service Pages -->
+  <url>
+    <loc>https://poolsidewaterservices.com/services/emergency-well-water-refill/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/pool-filling-new-installations/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/water-delivery-pool-liner-replacement/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/same-day-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/clean-potable-water-delivery/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/water-delivery-rural-properties/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://poolsidewaterservices.com/services/water-delivery-contractors/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

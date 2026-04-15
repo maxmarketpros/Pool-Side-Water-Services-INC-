@@ -25,7 +25,10 @@ export const metadata: Metadata = {
     images: [{ url: siteConfig.ogImage }],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
+    ],
     apple: "/apple-touch-icon.png",
   },
 };
@@ -38,6 +41,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} h-full`}>
       <body className="flex min-h-full flex-col">
+        {/* Hidden Netlify form for build-time detection (required for static export) */}
+        <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input name="name" />
+          <input name="phone" />
+          <input name="email" />
+          <textarea name="job-details" />
+        </form>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

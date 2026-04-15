@@ -15,7 +15,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { ChecklistItem } from "@/components/ui/ChecklistItem";
 import { homepageContent } from "@/config/homepage";
-import { homepageFaqKeys } from "@/config/faqs";
+import { businessConfig } from "@/config/business";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -116,7 +116,7 @@ export default function HomePage() {
         subtitle={content.process.subtitle}
         bgColor="white"
         primaryCta={{ label: "Get a Quote", href: "/contact" }}
-        secondaryCta={{ label: "Call (555) 123-4567", href: "tel:+15551234567" }}
+        secondaryCta={{ label: `Call ${businessConfig.phone}`, href: `tel:${businessConfig.phoneRaw}` }}
       />
 
       {/* Testimonials */}
@@ -136,7 +136,7 @@ export default function HomePage() {
         eyebrow={content.faq.eyebrow}
         heading={content.faq.heading}
         subtitle={content.faq.subtitle}
-        faqKeys={homepageFaqKeys}
+        faqKeys={["faq-home-1", "faq-home-2", "faq-home-3", "faq-home-4", "faq-home-5", "faq-home-6"]}
       />
 
       {/* CTA */}

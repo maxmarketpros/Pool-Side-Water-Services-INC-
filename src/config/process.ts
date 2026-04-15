@@ -3,30 +3,30 @@ import type { ProcessStep } from "@/types";
 export const processSteps: ProcessStep[] = [
   {
     step: 1,
-    title: "Consultation",
+    title: "Request",
     description:
-      "We start with a thorough discussion of your project goals, budget, and timeline. This is where we listen, assess, and begin building your custom plan.",
+      "Call, text, or submit a request online. Tell us what you need \u2014 pool filling, well water refill, emergency delivery \u2014 and we\u2019ll respond quickly with a free quote.",
     icon: "MessageSquare",
   },
   {
     step: 2,
-    title: "Planning & Estimate",
+    title: "Schedule",
     description:
-      "You receive a detailed proposal with transparent line-item pricing, a clear project timeline, and a comprehensive scope of work — no surprises.",
-    icon: "FileText",
+      "We confirm your delivery details, water volume, and timing. Same-day and 24/7 emergency options are available throughout Ottawa and Eastern Ontario.",
+    icon: "CalendarCheck",
   },
   {
     step: 3,
-    title: "Execution",
+    title: "Deliver",
     description:
-      "Our team gets to work with daily coordination, quality checkpoints, and regular progress updates. We treat your project like our own.",
-    icon: "Hammer",
+      "Our truck arrives on time with clean, fresh water. We handle the entire fill process with care for your property and attention to every detail.",
+    icon: "Truck",
   },
   {
     step: 4,
-    title: "Final Walkthrough",
+    title: "Follow Up",
     description:
-      "We don't consider a project done until you're completely satisfied. A thorough final inspection ensures every detail meets our exacting standards.",
-    icon: "CheckCircle",
+      "We check that everything is perfect. Our business is personal \u2014 your satisfaction matters to us, and we\u2019re always a phone call away if you need anything.",
+    icon: "ThumbsUp",
   },
 ];

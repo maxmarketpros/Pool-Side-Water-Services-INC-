@@ -17,7 +17,7 @@ export function generateLocalBusinessSchema() {
       addressLocality: businessConfig.address.city,
       addressRegion: businessConfig.address.state,
       postalCode: businessConfig.address.zip,
-      addressCountry: "US",
+      addressCountry: "CA",
     },
     geo: {
       "@type": "GeoCoordinates",

@@ -58,11 +58,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
   }
 
   const featureListItems = service.detailImages.map((imgKey, i) => ({
-    title: i === 0 ? "Quality You Can See" : "Results That Last",
+    title: i === 0 ? "Professional Equipment & Clean Water" : "Reliable Results, Every Time",
     description:
       i === 0
-        ? "Every project showcases our commitment to precision and craftsmanship. We take pride in delivering work that stands out for its quality and attention to detail."
-        : "Our work is built to last. We use premium materials and proven techniques to ensure your investment delivers value for years to come.",
+        ? "Our well-maintained fleet and professional equipment ensure every delivery meets the highest standards. We take pride in delivering clean, fresh water with care for your property."
+        : "With over 30 years of experience serving Ottawa and Eastern Ontario, our track record speaks for itself. Thousands of satisfied customers trust Pool Side Water Services for dependable water delivery.",
     imageKey: imgKey,
   }));
 

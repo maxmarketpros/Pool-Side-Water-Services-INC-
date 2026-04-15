@@ -8,9 +8,9 @@ import { services } from "@/config/services";
 import { generatePageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Our Services",
+  title: "Water Delivery Services | Pool Side Water Services Ottawa",
   description:
-    "Explore our comprehensive range of professional services. From initial consultation to final completion, we deliver quality you can trust.",
+    "Explore our water delivery services in Ottawa: pool filling, well water refill, emergency delivery, hot tub filling, potable water, bulk water, and more. Call (343) 777-2812.",
   path: "/services",
 });
 
@@ -18,9 +18,9 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        heading="Our Services"
-        subtitle="Comprehensive solutions delivered with precision, transparency, and care."
-        imageKey="service-1-hero"
+        heading="Water Delivery Services in Ottawa"
+        subtitle="Pool filling, well refills, emergency delivery, bulk water, and more \u2014 serving Ottawa and Eastern Ontario for over 30 years."
+        imageKey="services-hero"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services" },
@@ -39,7 +39,7 @@ export default function ServicesPage() {
 
       <CTASection
         heading="Not Sure Which Service You Need?"
-        text="Contact us for a free consultation. We'll assess your needs and recommend the best approach."
+        text="Contact us and we\u2019ll help you figure out the right water delivery solution for your needs. Free quotes, no obligation."
         primaryCta={{ label: "Get a Quote", href: "/contact" }}
       />
 

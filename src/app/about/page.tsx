@@ -10,13 +10,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Container } from "@/components/ui/Container";
 import { aboutContent } from "@/config/about";
 import { aboutStats } from "@/config/stats";
+import { businessConfig } from "@/config/business";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "About Us",
+  title: "About Pool Side Water Services | 30+ Years in Ottawa",
   description:
-    "Learn about our story, values, and the experience that drives our commitment to quality. Over 15 years of trusted service.",
+    "Learn about Pool Side Water Services, Ottawa's trusted water delivery company with over 30 years of experience. Owner-operated, community-focused, and committed to personal service.",
   path: "/about",
 });
 
@@ -47,7 +48,7 @@ export default function AboutPage() {
         imageKey="about-hero"
         breadcrumbs={breadcrumbs}
         primaryCta={{ label: "Get a Quote", href: "/contact" }}
-        secondaryCta={{ label: "Call (555) 123-4567", href: "tel:+15551234567" }}
+        secondaryCta={{ label: `Call ${businessConfig.phone}`, href: `tel:${businessConfig.phoneRaw}` }}
       />
 
       {/* Story Section */}
@@ -117,8 +118,8 @@ export default function AboutPage() {
       {/* Process */}
       <ProcessGrid
         eyebrow="Our Process"
-        heading="How Every Project Works"
-        subtitle="A proven four-step process refined over 15 years of delivering excellence."
+        heading="How Water Delivery Works"
+        subtitle="A straightforward four-step process refined over 30 years of reliable water delivery in Ottawa."
         primaryCta={{ label: "Get a Quote", href: "/contact" }}
       />
 
@@ -127,9 +128,9 @@ export default function AboutPage() {
 
       {/* CTA */}
       <CTASection
-        heading="Ready to Work With Us?"
-        text="Start with a free consultation. No pressure, no obligation — just an honest conversation about your project."
-        primaryCta={{ label: "Get a Quote", href: "/contact" }}
+        heading="Ready for Reliable Water Delivery?"
+        text="Request a free quote or call us directly. No pressure, no obligation \u2014 just honest, personal service from a team that\u2019s been serving Ottawa for over 30 years."
+        primaryCta={{ label: "Get a Free Quote", href: "/contact" }}
         secondaryCta={{ label: "View Our Services", href: "/services" }}
       />
 

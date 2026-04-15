@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "Premier Services",
-  tagline: "Quality Craftsmanship, Trusted Results",
+  name: "Pool Side Water Services",
+  tagline: "Our Business is Personal. Not Just a Transaction.",
   description:
-    "Professional service company delivering premium quality work with transparent pricing, owner-led accountability, and over 15 years of trusted experience.",
-  url: "https://example.com",
+    "Ottawa's trusted water delivery service with over 30 years of experience. Pool filling, well water refill, emergency water delivery, hot tub filling, potable water, and bulk water delivery across Ottawa and Eastern Ontario. Call (343) 777-2812.",
+  url: "https://poolsidewaterservices.com",
   ogImage: "/images/og-image.jpg",
   social: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    google: "https://g.page/",
+    facebook: "",
+    instagram: "",
+    google: "https://maps.app.goo.gl/wSod1oNpXHoAwJBW8",
   },
 } as const;

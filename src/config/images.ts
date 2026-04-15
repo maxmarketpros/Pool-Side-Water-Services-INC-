@@ -428,20 +428,38 @@ export const imageManifest: Record<string, ImageSlotConfig> = {
   // TESTIMONIALS
   // =====================================================================
   "testimonial-1": {
-    src: "/images/testimonial-1.jpg",
-    alt: "Satisfied Ottawa customer of Pool Side Water Services",
+    src: "/images/testimonial-1.png",
+    alt: "Michael D. - Ottawa customer",
     width: 200,
     height: 200,
   },
   "testimonial-2": {
-    src: "/images/testimonial-2.jpg",
-    alt: "Happy Ottawa homeowner after water delivery service",
+    src: "/images/testimonial-2.png",
+    alt: "Emily T. - Kanata customer",
     width: 200,
     height: 200,
   },
   "testimonial-3": {
-    src: "/images/testimonial-3.jpg",
-    alt: "Ottawa pool owner recommending Pool Side Water Services",
+    src: "/images/testimonial-3.png",
+    alt: "Sarah T. - Orleans customer",
+    width: 200,
+    height: 200,
+  },
+  "testimonial-4": {
+    src: "/images/testimonial-4.png",
+    alt: "David R. - Manotick customer",
+    width: 200,
+    height: 200,
+  },
+  "testimonial-5": {
+    src: "/images/testimonial-5.png",
+    alt: "Jennifer K. - Barrhaven customer",
+    width: 200,
+    height: 200,
+  },
+  "testimonial-6": {
+    src: "/images/testimonial-6.png",
+    alt: "Robert M. - Nepean customer",
     width: 200,
     height: 200,
   },

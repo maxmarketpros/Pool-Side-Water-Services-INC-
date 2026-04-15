@@ -69,7 +69,7 @@ export const businessConfig = {
 
   // ===== MAP EMBED =====
   googleBusinessMapEmbed:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2807.374591628245!2d-75.5690774!3d45.2806517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccde16dd7e8bc13%3A0xa5444e8e8f9ddb00!2sPoolside%20water%20services!5e0!3m2!1sen!2sus!4v1776275479327!5m2!1sen!2sus",
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d359537.0372323226!2d-75.8002569!3d45.25015655000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x67e7732c85566f43%3A0xb8cb59da6376c9ae!2sPool%20Side%20Water%20Services%20-%20Water%20Supply!5e0!3m2!1sen!2sus!4v1776277864134!5m2!1sen!2sus",
 
   // ===== FORM EMBED =====
   formEmbedUrl: "",

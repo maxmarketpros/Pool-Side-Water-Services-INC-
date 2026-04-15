@@ -31,7 +31,7 @@ export const testimonials: TestimonialItem[] = [
     quote:
       "Living on a rural property means well water issues are part of life. Pool Side has been our go-to for well refills for years now. Always reliable, always professional, and Kenny is a pleasure to deal with.",
     rating: 5,
-    image: "testimonial-1",
+    image: "testimonial-4",
   },
   {
     name: "Jennifer K.",
@@ -39,7 +39,7 @@ export const testimonials: TestimonialItem[] = [
     quote:
       "We use Pool Side Water Services for all our construction site water needs. Bulk deliveries are always on time and the pricing is very competitive. They understand the needs of contractors and never let us down.",
     rating: 5,
-    image: "testimonial-2",
+    image: "testimonial-5",
   },
   {
     name: "Robert M.",
@@ -47,6 +47,6 @@ export const testimonials: TestimonialItem[] = [
     quote:
       "Managing multiple properties means I need a water delivery company I can count on. Pool Side has been that company for over five years. Same-day service, fair pricing, and they always go the extra mile.",
     rating: 5,
-    image: "testimonial-3",
+    image: "testimonial-6",
   },
 ];

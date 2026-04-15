@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Menu, X, ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -143,14 +144,15 @@ export function Header() {
         <Container>
           <nav className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <Link
-              href="/"
-              className={cn(
-                "text-xl font-bold tracking-tight transition-colors",
-                scrolled || mobileOpen ? "text-foreground" : "text-white"
-              )}
-            >
-              {siteConfig.name}
+            <Link href="/" className="shrink-0">
+              <Image
+                src="/images/logo.png"
+                alt={siteConfig.name}
+                width={180}
+                height={48}
+                className="h-10 w-auto md:h-12"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}

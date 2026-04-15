@@ -1,6 +1,6 @@
 export const homepageContent = {
   hero: {
-    heading: "Ottawa\u2019s Trusted Water Delivery Service",
+    heading: "Water Delivery Service in Ottawa, CA",
     subtitle:
       "Pool filling, well water refill, emergency delivery, and more. Over 30 years of reliable water delivery across Ottawa and Eastern Ontario.",
     primaryCta: { label: "Get a Free Quote", href: "/contact" },
@@ -34,7 +34,7 @@ export const homepageContent = {
   },
   services: {
     eyebrow: "Our Services",
-    heading: "Water Delivery Solutions for Every Need",
+    heading: "Water Delivery Solutions for Every Need in Ottawa",
     subtitle:
       "From pool filling and well refills to emergency delivery and bulk water, we have Ottawa covered.",
   },

@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 interface NetlifyFormProps {
@@ -7,19 +9,38 @@ interface NetlifyFormProps {
 }
 
 export function NetlifyForm({ className }: NetlifyFormProps) {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      });
+      router.push("/thank-you/");
+    } catch {
+      alert("Something went wrong. Please try again or call us directly.");
+      setSubmitting(false);
+    }
+  }
+
   return (
     <form
       name="contact"
-      method="POST"
-      action="/thank-you/"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
+      onSubmit={handleSubmit}
       className={cn(
         "rounded-2xl bg-white p-6 shadow-card md:p-8",
         className
       )}
     >
-      {/* Hidden fields for Netlify */}
+      {/* Hidden field for Netlify */}
       <input type="hidden" name="form-name" value="contact" />
       <div className="hidden">
         <label>
@@ -111,9 +132,10 @@ export function NetlifyForm({ className }: NetlifyFormProps) {
         {/* Submit */}
         <button
           type="submit"
-          className="w-full rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-primary-600 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2"
+          disabled={submitting}
+          className="w-full rounded-lg bg-primary-500 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-primary-600 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary-300 focus:ring-offset-2 disabled:opacity-60 disabled:hover:translate-y-0"
         >
-          Submit Request
+          {submitting ? "Submitting..." : "Submit Request"}
         </button>
       </div>
     </form>

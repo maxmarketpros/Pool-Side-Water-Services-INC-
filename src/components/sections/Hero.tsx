@@ -10,7 +10,7 @@ export function Hero() {
   const { hero } = homepageContent;
 
   return (
-    <section className="relative flex min-h-screen items-center">
+    <section className="relative flex min-h-screen items-center overflow-hidden">
       {/* Background Image */}
       <ImageSlot
         imageKey="hero-home"
@@ -27,11 +27,11 @@ export function Hero() {
           Trusted Local Service Provider
         </span>
 
-        <h1 className="mx-auto max-w-4xl text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+        <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
           {hero.heading}
         </h1>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl">
+        <p className="mx-auto mt-6 max-w-2xl px-4 text-base leading-relaxed text-white/80 sm:text-lg md:text-xl">
           {hero.subtitle}
         </p>
 
@@ -55,9 +55,9 @@ export function Hero() {
         </div>
 
         {/* Stats Row */}
-        <div className="mx-auto mt-16 flex max-w-lg items-center justify-center gap-8 md:gap-12">
+        <div className="mx-auto mt-16 flex max-w-lg items-center justify-center gap-4 sm:gap-8 md:gap-12">
           {heroStats.map((stat, i) => (
-            <div key={i} className="flex items-center gap-8">
+            <div key={i} className="flex items-center gap-4 sm:gap-8">
               <StatItem value={stat.value} label={stat.label} light />
               {i < heroStats.length - 1 && (
                 <div className="h-10 w-px bg-white/20" />

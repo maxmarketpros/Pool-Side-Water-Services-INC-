@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone } from "lucide-react";
+import { MapPin, Clock, Phone, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { businessConfig } from "@/config/business";
 
@@ -24,6 +24,11 @@ export function InfoBar() {
             <Phone className="h-4 w-4 text-primary-200" />
             <span>Call {businessConfig.phone}</span>
           </a>
+          <div className="hidden h-4 w-px bg-white/20 md:block" />
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4 text-primary-200" />
+            <span>License: BN71258-3764</span>
+          </div>
         </div>
       </Container>
     </div>

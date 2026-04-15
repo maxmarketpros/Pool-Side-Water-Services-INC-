@@ -99,6 +99,7 @@ export function Footer() {
         <div className="border-t border-white/10 py-6">
           <p className="text-center text-xs text-white/40">
             &copy; {currentYear} {siteConfig.name}. All rights reserved.
+            &nbsp;&middot;&nbsp;Business License: BN71258-3764
           </p>
         </div>
       </Container>

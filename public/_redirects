@@ -1,0 +1,9 @@
+# Old Webflow site slug redirects (301 permanent)
+# These preserve SEO value from the old URLs to the closest matching new pages
+
+/services-gallery-water-supply-pressure-washing-excellence-pool-side-water-services  /services  301!
+/client-testimonials-water-supply-pressure-washing-experiences-pool-side-water-services  /about  301!
+/contact-us-water-supply-pressure-washing-pool-side-water-services  /contact  301!
+/water-supply-delivery-services-efficient-solutions-pool-side-water-services  /services/bulk-water-delivery  301!
+/power-washing-services-expert-pressure-washing-pool-side-water-services  /services  301!
+/watering-new-sod-trees-nurturing-growth-pool-side-water-services  /services/water-delivery-rural-properties  301!
